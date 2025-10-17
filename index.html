@@ -1,138 +1,168 @@
 <!DOCTYPE html>
-<html lang="en" class="js backgroundsize borderimage csstransitions fontface svg" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Hi/Max Real Estate - Home</title>
-
-  <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/wet-boew/js/i18n/en.min.js"></script>
-  <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/wet-boew/js/deps/jsonpointer.min.js"></script>
-
-  <link rel="apple-touch-icon" sizes="57x57 72x72 114x114 144x144 150x150" class="wb-favicon"
-        href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/wet-boew/assets/favicon-mobile.png">
-  <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/wet-boew/css/theme.min.css">
-  <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/cdts/cdtsfixes.css">
-  <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/cdts/cdtsapps.css">
-
+  <title>Hi/Max Real Estate - Content to markup</title>
   <style>
-    .social a svg {
-      width: 30px;
-      fill: #91929a;
-    }
+    /* Minimal layout so the blocks appear roughly like your mockup */
+    .grid { display: flex; gap: 1rem; }
+    .col-8 { flex: 2; }
+    .col-4 { flex: 1; }
+    .three-up { display: flex; gap: 1rem; }
+    .three-up article { flex: 1; border: 1px solid #ccc; padding: .5rem; }
+    figure img { width: 100%; height: auto; display:block; }
+    table { border-collapse: collapse; width: 100%; }
+    table, th, td { border: 1px solid #666; padding: .4rem; text-align: left; }
+    .highlight { background: yellow; font-weight: bold; display: inline-block; padding: .05rem .25rem; }
+    .sidebar ul { list-style: disc; padding-left: 1.25rem; }
   </style>
 </head>
-
 <body>
 
-  <!-- Header -->
   <header role="banner" aria-label="Site header">
-    <div class="app-bar">
-      <div class="container">
-        <h1 class="wb-inv">Hi/Max Real Estate Web Application</h1>
-        <a class="app-name" href="./index-en.html">Hi/Max Real Estate</a>
-      </div>
-    </div>
-
-    <!-- Main navigation -->
-    <nav id="wb-sm" role="navigation" aria-label="Main navigation" typeof="SiteNavigationElement">
-      <div class="pnl-strt container nvbar">
-        <h2 class="wb-inv">Main menu</h2>
-        <ul role="menubar" class="list-inline menu">
-          <li><a class="item" href="index-en.html" role="menuitem">Home</a></li>
-          <li><a class="item" href="internet-en.html" role="menuitem">Buying</a></li>
-          <li><a class="item" href="intranet-en.html" role="menuitem">Selling</a></li>
-          <li><a class="item" href="faq-en.html" role="menuitem">FAQs</a></li>
-          <li><a class="item" href="contact-en.html" role="menuitem">Contact us</a></li>
-        </ul>
-      </div>
-    </nav>
+    <h1>Content to markup</h1>
   </header>
 
-  <!-- Main content -->
-  <main role="main" aria-label="Main content" class="container">
-    <h2>Welcome</h2>
-    <p>Content A here</p>
-    <div class="row">
-      <aside class="col-md-4 pull-right" aria-label="Sidebar content">
-        <p>Content B here</p>
-      </aside>
-      <section class="col-md-8" aria-label="Primary content">
-        <p>Content C here</p>
-      </section>
-    </div>
+  <main role="main" aria-label="Main content">
 
-    <div>Content D here</div>
+    <!-- Content A and overall lead -->
+    <section aria-labelledby="content-a">
+      <h2 id="content-a"><span class="highlight">Content A</span></h2>
 
-    <section aria-label="Additional content">
-      <div class="row">
-        <div class="col-md-4">
-          <p>Content F here</p>
+      <article aria-labelledby="lead-title">
+        <h3 id="lead-title">Hi/Max Real Estate &amp; Houses</h3>
+        <p>
+          Buying or selling a home is likely the largest and most important transaction you’ll ever make.
+          That’s why so many trust HI/MAX Real Estate, which according to Canadian consumers, has been
+          voted #1 Most Trusted Real Estate Agents in Canada six times in a row.
+        </p>
+        <p><a href="#" title="Lets get started">Lets get started</a></p>
+      </article>
+
+      <div class="grid" style="margin-top: 1rem;">
+        <!-- Main column (Content C + table) -->
+        <div class="col-8">
+          <section aria-labelledby="content-c">
+            <h3 id="content-c"><span class="highlight">Content C</span></h3>
+
+            <article aria-labelledby="why-choosing">
+              <h4 id="why-choosing">Why choosing HI/Max</h4>
+              <p>
+                Hi/Max agents go above and beyond and always strive to be the best they can be.
+                HI/MAX is extremely community focused, and our agents are too!
+              </p>
+
+              <h4>Stats of HI/Max</h4>
+              <table role="table" aria-labelledby="stats-caption">
+                <caption id="stats-caption" style="caption-side: top; text-align:left; font-weight:bold;">
+                  Stats of HI/Max
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Year</th>
+                    <th scope="col" colspan="2">Sold Properties</th>
+                    <th scope="col" colspan="2">Average selling price</th>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <th scope="col">Quebec</th>
+                    <th scope="col">Ontario</th>
+                    <th scope="col">Single house</th>
+                    <th scope="col">Condo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">2021</th>
+                    <td>50</td>
+                    <td>100</td>
+                    <td>$500,00</td>
+                    <td>189,000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2022</th>
+                    <td>100</td>
+                    <td>200</td>
+                    <td>$780,00</td>
+                    <td>240,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </section>
         </div>
-        <div class="col-md-4">
-          <p>Content G here</p>
-        </div>
-        <div class="col-md-4">
-          <p>Content H here</p>
-        </div>
+
+        <!-- Sidebar (Content B) -->
+        <aside class="col-4 sidebar" role="complementary" aria-labelledby="content-b">
+          <h3 id="content-b"><span class="highlight">Content B</span></h3>
+          <h4>Related resources</h4>
+          <p>
+            It's time to sell and find the next "one". Let us help you navigate the ins &amp; outs of your next move.
+          </p>
+          <ul>
+            <li><a href="#" title="Looking for an upgrade?">Looking for an upgrade?</a></li>
+            <li><a href="#" title="Buying tips">Buying tips</a></li>
+            <li><a href="#" title="How much is your current home worth?">How much is your current home worth?</a></li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <footer aria-label="Page details">
-      <dl id="wb-dtmd">
-        <dt>Date modified: </dt>
-        <dd><time datetime="2023-10-13">October 13, 2023</time></dd>
-      </dl>
-    </footer>
+    <!-- Content D: resources with three articles -->
+    <section aria-labelledby="content-d" style="margin-top:1.5rem;">
+      <h2 id="content-d"><span class="highlight">Content D</span></h2>
+      <h3>More Resources on How to Choose the Right Agent</h3>
+
+      <div class="three-up" aria-label="Resource articles">
+
+        <!-- Article F (left) -->
+        <article aria-labelledby="art-f">
+          <figure>
+            <img src="/mnt/data/2.png" alt="Red birdhouse style 'For Sale' sign hanging on a tree branch" />
+          </figure>
+          <h4 id="art-f"><a href="#" title="What Are The Risks of Selling a Home Yourself?">What Are The Risks of Selling a Home Yourself?</a></h4>
+          <p>
+            We’ve all seen the videos, read the stories, and gasped at the images of people who thought they could
+            conquer a project that would have been better left to the professionals.
+          </p>
+          <p><a href="#" title="Read more">Read more</a></p>
+          <p><span class="highlight">Content F</span></p>
+        </article>
+
+        <!-- Article G (middle) -->
+        <article aria-labelledby="art-g">
+          <figure>
+            <img src="/mnt/data/3.png" alt="Real estate agent speaking with a client at a desk" />
+          </figure>
+          <h4 id="art-g"><a href="#" title="7 Questions to Ask a Real Estate Agent Before You Commit">7 Questions to Ask a Real Estate Agent Before You Commit</a></h4>
+          <p>
+            According to research by the National Association of Realtors, there are considerable benefits to working
+            with a real estate agent, including higher sale prices.
+          </p>
+          <p><span class="highlight">Content G</span></p>
+        </article>
+
+        <!-- Article H (right) -->
+        <article aria-labelledby="art-h">
+          <figure>
+            <img src="/mnt/data/poko.png" alt="Man adjusting a 'For Sale' real estate sign in front of a house" />
+          </figure>
+          <h4 id="art-h"><a href="#" title="8 Reasons to Hire an Agent When Selling Your Home">8 Reasons to Hire an Agent When Selling Your Home</a></h4>
+          <p>
+            With all the many different moving parts involved in selling your home, here are eight very valid reasons
+            to have a real estate agent on speed dial.
+          </p>
+          <p><span class="highlight">Content H</span></p>
+        </article>
+
+      </div>
+    </section>
+
   </main>
 
- <!-- Footer -->
-<footer role="contentinfo" aria-label="Site footer">
-  <div class="gc-sub-footer">
-    <div class="container d-flex align-items-center">
-      <div>
-        <h3 class="wb-inv" id="aboutWebApp">About Hi/Max Real Estate</h3>
-        <ul>
-          <li><a href="#">About the company</a></li>
-          <li><a href="#">Privacy policy</a></li>
-          <li><a href="#">Accessibility statement</a></li>
-          <li class="social">
-            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"
-               aria-label="Visit our Twitter page (opens in a new window)">
-              <svg xmlns="http://www.w3.org/2000/svg"
-                   viewBox="0 0 512 512"
-                   width="30" height="30"
-                   fill="#1DA1F2"
-                   role="img"
-                   focusable="false"
-                   aria-hidden="false"
-                   aria-labelledby="twitter-title">
-                <title id="twitter-title">Twitter</title>
-                <path d="M459.4 151.7c.3 4.5.3 9 .3 13.6 0 
-                138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.4-161.1-47.1 
-                8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 
-                130.3-44.8-46.1-.8-84.8-31.2-98.1-72.8 
-                6.5 1 13 1.6 19.8 1.6 9.4 0 18.7-1.3 
-                27.4-3.6-48.1-9.7-84.3-52.1-84.3-103v-1.3 
-                c14.3 7.9 30.9 12.7 48.5 13.3-28.8-19.2-47.8-51.9-47.8-88.9 
-                0-19.5 5.2-37.6 14.3-53.1 52.1 64 130.4 106 
-                218.4 110.4-1.6-7.8-2.6-15.9-2.6-24 
-                0-57.8 46.9-104.7 104.7-104.7 30.2 0 
-                57.5 12.7 76.7 33.1 23.7-4.5 46.1-13.3 
-                66.3-25.3-7.8 24.4-24.4 44.8-46.1 
-                57.8 21.1-2.3 41.6-8.1 60.4-16.2 
-                -14.3 20.8-32.1 39.3-52.6 54.2z"/>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-xs-6 visible-sm visible-xs tofpg">
-        <a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
-      </div>
-    </div>
-  </div>
-</footer>
+  <footer role="contentinfo" aria-label="Page footer">
+    <p>Page last updated: <time datetime="2023-10-13">2023-10-13</time></p>
+  </footer>
 
 </body>
 </html>
-
