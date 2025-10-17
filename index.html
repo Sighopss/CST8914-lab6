@@ -1,134 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="js backgroundsize borderimage csstransitions fontface svg" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hi/Max Real Estate & Houses</title>
+  <meta charset="utf-8">
+  <title>Hi/Max Real Estate - Home</title>
+
+  <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/wet-boew/js/i18n/en.min.js"></script>
+  <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/wet-boew/js/deps/jsonpointer.min.js"></script>
+
+  <link rel="apple-touch-icon" sizes="57x57 72x72 114x114 144x144 150x150" class="wb-favicon"
+        href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/wet-boew/assets/favicon-mobile.png">
+  <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/wet-boew/css/theme.min.css">
+  <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/cdts/cdtsfixes.css">
+  <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/cdts/cdtsapps.css">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f8f8;
-    }
-    header, main, footer {
-      padding: 20px;
-      margin: 10px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
-    }
-    header {
-      background-color: #004080;
-      color: white;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 20px;
-    }
-    th, td {
-      border: 1px solid #999;
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      background-color: #e0e0e0;
-    }
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-    img {
-      width: 150px;
-      height: auto;
-      border-radius: 5px;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9em;
-    }
-    .social-icon svg {
-      width: 24px;
-      height: 24px;
-      vertical-align: middle;
-      fill: #1DA1F2;
+    .social a svg {
+      width: 30px;
+      fill: #91929a;
     }
   </style>
 </head>
+
 <body>
-  <header role="banner">
-    <h1>Welcome to Our Product Page</h1>
-    <nav aria-label="Main navigation">
-      <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
+
+  <!-- Header -->
+  <header role="banner" aria-label="Site header">
+    <div class="app-bar">
+      <div class="container">
+        <h1 class="wb-inv">Hi/Max Real Estate Web Application</h1>
+        <a class="app-name" href="./index-en.html">Hi/Max Real Estate</a>
+      </div>
+    </div>
+
+    <!-- Main navigation -->
+    <nav id="wb-sm" role="navigation" aria-label="Main navigation" typeof="SiteNavigationElement">
+      <div class="pnl-strt container nvbar">
+        <h2 class="wb-inv">Main menu</h2>
+        <ul role="menubar" class="list-inline menu">
+          <li><a class="item" href="index-en.html" role="menuitem">Home</a></li>
+          <li><a class="item" href="internet-en.html" role="menuitem">Buying</a></li>
+          <li><a class="item" href="intranet-en.html" role="menuitem">Selling</a></li>
+          <li><a class="item" href="faq-en.html" role="menuitem">FAQs</a></li>
+          <li><a class="item" href="contact-en.html" role="menuitem">Contact us</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-  <main role="main" id="products">
-    <h2>Our Top Products</h2>
-    <table aria-label="Product table with descriptions">
-      <thead>
-        <tr>
-          <th>Image</th>
-          <th>Product Name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><img src="1.png" alt="Product 1 - Wireless headphones" /></td>
-          <td>Wireless Headphones</td>
-          <td>High-quality sound with noise cancellation and long battery life.</td>
-        </tr>
-        <tr>
-          <td><img src="2.png" alt="Product 2 - Smartwatch" /></td>
-          <td>Smartwatch</td>
-          <td>Track your fitness, monitor your heart rate, and stay connected.</td>
-        </tr>
-        <tr>
-          <td><img src="3.png" alt="Product 3 - Bluetooth Speaker" /></td>
-          <td>Bluetooth Speaker</td>
-          <td>Portable, water-resistant speaker with deep bass and rich audio.</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- Main content -->
+  <main role="main" aria-label="Main content" class="container">
+    <h2>Welcome</h2>
+    <p>Content A here</p>
+    <div class="row">
+      <aside class="col-md-4 pull-right" aria-label="Sidebar content">
+        <p>Content B here</p>
+      </aside>
+      <section class="col-md-8" aria-label="Primary content">
+        <p>Content C here</p>
+      </section>
+    </div>
+
+    <div>Content D here</div>
+
+    <section aria-label="Additional content">
+      <div class="row">
+        <div class="col-md-4">
+          <p>Content F here</p>
+        </div>
+        <div class="col-md-4">
+          <p>Content G here</p>
+        </div>
+        <div class="col-md-4">
+          <p>Content H here</p>
+        </div>
+      </div>
+    </section>
+
+    <footer aria-label="Page details">
+      <dl id="wb-dtmd">
+        <dt>Date modified: </dt>
+        <dd><time datetime="2023-10-13">October 13, 2023</time></dd>
+      </dl>
+    </footer>
   </main>
 
-  <footer role="contentinfo" id="contact">
-    <p>Follow us on social media:</p>
-    <a href="https://twitter.com" aria-label="Follow us on Twitter" class="social-icon">
-      <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="twitter-title">
-        <title id="twitter-title">Twitter icon</title>
-        <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 
-                 1.014-.611 1.794-1.574 2.163-2.723-.951.564-2.005.974-3.127 
-                 1.195-.897-.959-2.178-1.559-3.594-1.559-2.723 
-                 0-4.928 2.205-4.928 4.928 0 .39.045.765.127 
-                 1.124C7.691 8.094 4.066 6.13 1.64 
-                 3.161c-.427.729-.666 1.577-.666 
-                 2.475 0 1.708.87 3.216 2.188 
-                 4.099-.807-.026-1.566-.248-2.228-.616v.061c0 
-                 2.385 1.693 4.374 3.946 
-                 4.827-.413.111-.849.171-1.296.171-.314 
-                 0-.615-.03-.916-.086.631 1.953 2.445 
-                 3.377 4.604 3.419-1.68 1.319-3.809 
-                 2.105-6.102 2.105-.39 
-                 0-.779-.023-1.17-.067 2.179 1.396 4.768 
-                 2.209 7.557 2.209 9.054 
-                 0 14.002-7.496 14.002-13.986 
-                 0-.21-.004-.42-.014-.63.962-.689 
-                 1.8-1.56 2.46-2.548z"/>
-      </svg>
-    </a>
-    <p>&copy; 2025 Our Company. All rights reserved.</p>
-  </footer>
+<li class="social">
+  <a href="https://twitter.com/YourHandle" target="_blank" rel="noopener noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 448 512"
+         role="img"
+         focusable="false"
+         aria-labelledby="twitterTitle">
+      <title id="twitterTitle">Hi/Max Real Estate on Twitter (opens in new window)</title>
+      <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"></path>
+    </svg>
+  </a>
+</li>
+
 </body>
 </html>
